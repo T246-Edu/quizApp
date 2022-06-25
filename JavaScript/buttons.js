@@ -142,8 +142,8 @@ if (nextBTN) {
         let user_mark = document.createElement("p");
         q_right.id = "text-result";
         q_user.id = "text-result";
-        q_right.innerHTML = right_answer;
-        q_user.innerHTML = user_answer;
+        q_right.innerHTML = convertHTML(right_answer);
+        q_user.innerHTML = convertHTML(user_answer);
         user_mark.innerText = `Your grade is: ${student_mark} / 2`;
         user_mark.id = "text-result";
         if (student_mark < 2) {

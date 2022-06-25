@@ -51,9 +51,9 @@ function loadQuiz() {
       if (Object.values(currentQuiz.answers)[keysCounter] == null) {
         elements[keysCounter].style.display = "none";
       } else {
-        elements_text[keysCounter].innerHTML = Object.values(
-          currentQuiz.answers
-        )[keysCounter];
+        elements_text[keysCounter].innerHTML = convertHTML(
+          Object.values(currentQuiz.answers)[keysCounter]
+        );
       }
     }
     if (currentQuiz.multiple_correct_answers == "true") {
@@ -87,7 +87,6 @@ const currentDate = new Date();
 var newDate = addMinutes(currentDate, 30);
 
 var refreshIntervalId = setInterval(count_down, 1000);
-
 
 loadQuiz();
 setInterval(loadQuiz, 1000);
